@@ -1,0 +1,18 @@
+# Archivos de imagenes
+assets/img
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Node 
+node_modules/
+npm-debug.log
+
+# Builds
+dist/
+build/
+
+# IDEs/editores
+.vscode/
+*.swp

@@ -1,0 +1,33 @@
+@media(max-width: 765px){
+
+    .buttons{
+        height: 2.9rem;
+    }
+
+}
+
+@media(max-width:691px){
+    main{
+        width: 90vw;
+    }
+}
+
+@media(max-width:400px) {
+    main {
+        gap: 0px;
+        width: 75%;
+        height: 70vh;
+    }
+
+    .result__text {
+        font-size: 2rem;
+    }
+
+    .keyboard{
+        width: 100%;
+    }
+    .buttons{
+        height: 2.1rem;
+    }
+
+}

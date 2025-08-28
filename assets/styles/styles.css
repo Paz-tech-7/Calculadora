@@ -1,0 +1,118 @@
+/*Variables generales*/
+
+:root {
+    --min-width: 15vw;
+    --min-height: 20vh;
+    --max-widht: 50vw;
+    --max-height: 80vh;
+
+    --background-color-calculator: rgb(0, 0, 0);
+    --color-text: white;
+
+    --font-family-default: Arial;
+
+    --keyboards-background: rgb(24, 24, 24);
+    --numbers-background: rgba(65, 65, 65, 0.738);
+    --equals-background: rgba(53, 240, 253, 0.811);
+}
+
+
+/*Estilos generales y maquetacion*/
+
+* {
+    font-family: var(--font-family-default);
+    font-size: 19pt;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: var(--background-color-calculator);
+    color: var(--color-text);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 10px;
+    border: 1px grey solid;
+    border-radius: 10px;
+    height: 25rem;
+    width: 25rem;
+    gap: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/*Estilos especificos de la calculadora*/
+/* .calc {
+    min-width: var(--min-width);
+    max-width: var(--max-widht);min-height: var(--min-height);
+    max-height: var(--max-height);
+} */
+
+.result {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    height: max-content;
+    text-align: right;
+}
+
+.result__text {
+    margin-bottom: 1px;
+    font-size: 45pt;
+}
+
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    height: var(--max-widht);
+}
+.operation{
+    height: 3rem;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.buttons {
+    border-radius: 5px;
+}
+
+.equals {
+    grid-column: 1/5;
+    background-color: var(--equals-background);
+}
+
+.keyboard__numbers {
+    background-color: var(--numbers-background);
+    color: var(--color-text)
+}
+
+/*Representa los elementos que tienen la clase keyboard_operations pero quen o tienen la clase equals*/
+.keyboard__operations:not(.equals), .coma {
+    background-color: var(--keyboards-background);
+    color: var(--color-text);
+}
+
+.square-root {
+    background-image: var(--images2);
+    background-color: var(--keyboards-background);
+}
+
+/*Representa la interactividad al poner el cursor sobre el elemento*/
+
+.equals:hover {
+    opacity: .9;
+}
+
+.keyboard__numbers:hover {
+    background-color: var(--keyboards-background);
+}
+
+
+.keyboard__operations:not(.equals):hover, .coma:hover {
+    background-color: var(--numbers-background);
+}
+
